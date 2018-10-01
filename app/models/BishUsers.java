@@ -58,15 +58,15 @@ public class BishUsers extends Model
         this.obj_id = odj_id;
     }
 
-    public double getCurrent_altitude() {
+    public Double getCurrent_altitude() {
         return current_altitude;
     }
 
-    public void setCurrent_altitude(double current_altitude) {
+    public void setCurrent_altitude(Double current_altitude) {
         this.current_altitude = current_altitude;
     }
 
-    public int getCurrent_floor() {
+    public Integer getCurrent_floor() {
         return current_floor;
     }
 
@@ -74,7 +74,7 @@ public class BishUsers extends Model
         this.current_floor = current_floor;
     }
 
-    public BishUsers(int id, String name, String surname, int ps_id, int odj_id, double current_altitude, int current_floor) {
+    public BishUsers(int id, String name, String surname, int ps_id, int odj_id, Double current_altitude, Integer current_floor) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -84,6 +84,6 @@ public class BishUsers extends Model
         this.current_floor = current_floor;
     }
 
-    private double current_altitude;
-    private int current_floor;
+    private Double current_altitude;
+    private Integer current_floor;
 }

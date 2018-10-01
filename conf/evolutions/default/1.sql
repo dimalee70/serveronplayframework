@@ -3,14 +3,25 @@
 
 # --- !Ups
 
+create table bish_objects (
+  id                            number(10) not null,
+  name                          varchar2(255),
+  city                          varchar2(255),
+  address                       varchar2(255),
+  floors                        number(10),
+  fl_attitude                   number(19,4) not null,
+  constraint pk_bish_objects primary key (id)
+);
+create sequence bish_objects_seq;
+
 create table bish_users (
   id                            number(10) not null,
   name                          varchar2(255),
   surname                       varchar2(255),
   ps_id                         number(10) not null,
   obj_id                        number(10) not null,
-  current_altitude              number(19,4) not null,
-  current_floor                 number(10) not null,
+  current_altitude              number(19,4),
+  current_floor                 number(10),
   constraint pk_bish_users primary key (id)
 );
 create sequence bish_users_seq;
@@ -44,6 +55,9 @@ create sequence user_loc_seq;
 
 
 # --- !Downs
+
+drop table bish_objects cascade constraints purge;
+drop sequence bish_objects_seq;
 
 drop table bish_users cascade constraints purge;
 drop sequence bish_users_seq;

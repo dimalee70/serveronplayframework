@@ -16,3 +16,8 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 GET     /welcome/:name/:lastname    controllers.HomeController.welcome(name: String, lastname: String)
 
 GET     /gsm                        controllers.HomeController.gsm(imei: String, temperature: String, pressure: String)
+
+
+
+
+

@@ -2,6 +2,7 @@ package models;
 
 import io.ebean.Finder;
 import io.ebean.Model;
+import io.ebeaninternal.server.lib.util.Str;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -21,12 +22,12 @@ public class UserLoc extends Model
     public  static Finder<Integer,UserLoc> find = new Finder<>(UserLoc.class);
 
 
-    public UserLoc(int user_id, int object_id, Date dt, double altitude) {
-        this.user_id = user_id;
-        this.object_id = object_id;
-        this.dt = dt;
-        this.altitude = altitude;
-    }
+//    public UserLoc(int user_id, int object_id, Date dt, double altitude) {
+//        this.user_id = user_id;
+//        this.object_id = object_id;
+//        this.dt = dt;
+//        this.altitude = altitude;
+//    }
 
     public int getUser_id() {
         return user_id;
